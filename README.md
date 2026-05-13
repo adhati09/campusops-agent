@@ -1,3 +1,7 @@
+**Description**
+An agentic AI planning workspace that helps student organizations turn campus initiative ideas into execution plans, task lists, critiques, and event announcements.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
