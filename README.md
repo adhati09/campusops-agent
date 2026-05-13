@@ -1,4 +1,4 @@
-**Description**
+**Description**:
 An agentic AI planning workspace that helps student organizations turn campus initiative ideas into execution plans, task lists, critiques, and event announcements.
 
 
