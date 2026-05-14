@@ -46,10 +46,10 @@ export async function POST(request: Request) {
   }
 
   if (!process.env.GEMINI_API_KEY) {
-    return NextResponse.json(
-      { error: "Missing GEMINI_API_KEY in .env.local." },
-      { status: 500 },
-    );
+    return NextResponse.json({
+      ...createFallbackPlan(idea),
+      demoFallback: true,
+    });
   }
 
   const context = questions
