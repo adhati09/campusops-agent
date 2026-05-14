@@ -370,6 +370,10 @@ export default function Home() {
                   <h1 className="mt-2 text-2xl font-semibold">
                     Describe the campus initiative.
                   </h1>
+                  <p className="mt-2 text-sm leading-6 text-slate-400">
+                    Start with a rough idea. The Planning Agent will ask a few
+                    follow-up questions before creating the full plan.
+                  </p>
                 </div>
               </div>
 
@@ -379,6 +383,17 @@ export default function Home() {
                 placeholder="Example: Our AI club wants to host a workshop with alumni speakers and food."
                 className="min-h-40 w-full resize-none rounded-md border border-white/10 bg-slate-950/80 p-4 text-sm text-white outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20"
               />
+
+              <div className="mt-4 rounded-md border border-sky-400/20 bg-sky-400/10 p-4">
+                <p className="text-sm font-semibold text-sky-100">
+                  First step: let the Planning Agent clarify the idea.
+                </p>
+                <div className="mt-3 grid gap-2 text-sm text-slate-300">
+                  <p>1. Enter a rough event or initiative idea.</p>
+                  <p>2. Answer the agent&apos;s follow-up questions.</p>
+                  <p>3. Generate the plan, review, and announcement.</p>
+                </div>
+              </div>
 
               <div className="mt-4 flex flex-wrap gap-2">
                 <button
@@ -392,7 +407,9 @@ export default function Home() {
                   disabled={isGeneratingQuestions}
                   className="rounded-md bg-sky-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-sky-300 disabled:cursor-not-allowed disabled:bg-slate-700 disabled:text-slate-400"
                 >
-                  {isGeneratingQuestions ? "Generating..." : "Generate Questions"}
+                  {isGeneratingQuestions
+                    ? "Planning Agent is reading..."
+                    : "Ask Follow-Up Questions"}
                 </button>
               </div>
             </section>
@@ -538,7 +555,7 @@ export default function Home() {
                   {!plan ? (
                     <EmptyState
                       title="No plan generated yet"
-                      body="Generate questions, save your answers, then run the Plan Generator Agent."
+                      body="Ask follow-up questions, save your answers, then run the Plan Generator Agent."
                     />
                   ) : (
                     <>
